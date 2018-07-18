@@ -1,7 +1,7 @@
 html {
 	overflow-x: hidden;
 	overflow-y: visible;
-	font-family: 'Century Gothic', sans-serif;
+	font-family: 'Century Gothic', 'Helvetica', sans-serif;
 	margin: 0;
 	padding: 0;
 	width: 100vw;
@@ -19,7 +19,7 @@ body,header {
 	text-align: center;
 	height: 225px;
 	position: static;
-	background: #222222;
+	background: #222;
 }
 #page_title {
 	font-size: 4em;
@@ -32,6 +32,9 @@ body,header {
 h1,h2,h3,h4,h5,p,span {
 	color: white;
 	font-weight: normal;
+	max-width: 100%;
+	word-wrap: normal;
+	margin: 16px 32px;
 }
 #header_image {
 	display: block;
@@ -94,7 +97,7 @@ h1,h2,h3,h4,h5,p,span {
 	text-align: center;
 	text-decoration: none;
 	color: white;
-	font-size: 1.25em;
+	font-size: 1.35em;
 	height: 75px;
 	line-height: 75px;
 	transition: background 0.5s ease;
@@ -109,11 +112,13 @@ h1,h2,h3,h4,h5,p,span {
 }
 #page_container {
 	background: #555555;
-	width: 100vw;
+	width: calc(100vw - 50px);
 	min-height: calc(100vh - 500px);
 	color: white;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding: 25px;
+}
+.contact_page {
+	text-align: center;
 }
 #footer {
 	height: 75px;
@@ -122,4 +127,43 @@ h1,h2,h3,h4,h5,p,span {
 	color: white;
 	line-height: 75px;
 	width: 100%;
+}
+h1.header {
+	display: none;
+	margin-top: 2em;
+}
+p.content {
+	display: none;
+	font-size: 1.25em;
+	text-align: justify;
+}
+.card {
+	display: inline-block;
+	width: 300px;
+	height: 350px;
+	background: white;
+	border-radius: 16px;
+	box-shadow: 4px 4px 4px #000;
+	margin: 50px 50px;
+	cursor: pointer;
+	transition: background 0.1s ease;
+}
+.card>.contact_logo {
+	height: 150px;
+	display: block;
+	margin: 35px auto;
+}
+.card>.title {
+	color: black;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.card>.data {
+	color: black;
+	text-decoration: none;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.25em;
 }
