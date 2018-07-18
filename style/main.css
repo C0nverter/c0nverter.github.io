@@ -86,15 +86,26 @@ h1,h2,h3,h4,h5,p,span {
 	background: linear-gradient(#353535,#555);
 }
 .menu_item {
+	background: none;
 	display: table-cell;
 	margin: 0;
 	width: 50%;
 	float: left;
 	text-align: center;
+	text-decoration: none;
 	color: white;
 	font-size: 1.25em;
 	height: 75px;
 	line-height: 75px;
+	transition: background 0.5s ease;
+}
+.upper:hover {
+	background: #222;
+	transition: background 0.5s ease;
+}
+.lower:hover {
+	background: #555;
+	transition: background 0.5s ease;
 }
 #page_container {
 	background: #555555;

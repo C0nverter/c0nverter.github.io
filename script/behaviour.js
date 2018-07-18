@@ -17,13 +17,3 @@ $(function() {
 		}
 	});
 });
-
-function resizeIframe(iframe) {
-	iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-}
-
-function prepare() {
-	var outer = document.getElementById('outer');
-	var inner = document.getElementById('inner');
-	inner.style.right = inner.clientWidth - inner.offsetWidth + "px";
-}
