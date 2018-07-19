@@ -1,32 +1,229 @@
-@media only screen and (max-device-width: 1440px) {
-	body {
-		background: #222;
-	}
-	#header {
-		height: auto;
-	}
-	#header_image {
-		width: 100px;
-	}
-	.hi_not_scrolled {
-		position: static;
-		margin: 50px auto 0 auto;
-		display: block;
-	}
-	.hi_scrolled {
-		position: static;
-	}
-	#menu_container {
-		height: 100px;
-	}
-	#contain_top {
-		height: 50px;
-	}
-	#contain_btm {
-		height: 50px;
-	}
-	.menu_item {
-		height: 50px;
-		line-height: 50px;
-	}
+html {
+	overflow-x: hidden;
+	overflow-y: visible;
+	font-family: 'Century Gothic', 'Helvetica', sans-serif;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+}
+body {
+	background: #222;
+}
+body,header {
+	padding: 0;
+	margin: 0;
+	overflow-y: visible;
+	width: 100vw;
+}
+#header {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	height: auto;
+	position: static;
+	background: #222;
+}
+#page_title {
+	font-size: 4em;
+	margin: 0;
+	padding: 0.5em;
+}
+#page_subtitle {
+	visibility: visible;
+	padding-bottom: 32px;
+	margin-bottom: 0;
+}
+h1,h2,h3,h4,h5,p,span {
+	color: white;
+	font-weight: normal;
+	max-width: 100%;
+	word-wrap: normal;
+	margin: 16px 32px;
+}
+#header_image {
+	display: block;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px solid white;
+	width: 100px;
+}
+.hi_not_scrolled {
+	position: static;
+	margin: 50px auto 0 auto;
+	display: block;
+}
+.hi_scrolled {
+	position: static;
+}
+#menu_container {
+	width: 100vw;
+	background: #555555;
+	height: 100px;
+}
+.mc_not_scrolled {
+	position: static;
+}
+.mc_scrolled {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+#contain_top {
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	box-sizing: border-box;
+	width: 100%;
+	display: block;
+	background: linear-gradient(#222,#353535);
+}
+#contain_btm {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 50px;
+	width: 100%;
+	display: block;
+	background: linear-gradient(#353535,#555);
+}
+.menu_item {
+	background: none;
+	display: table-cell;
+	margin: 0;
+	width: 50%;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-size: 1.35em;
+	height: 50px;
+	line-height: 50px;
+	transition: background 0.5s ease;
+}
+.upper:hover {
+	background: #222;
+	transition: background 0.5s ease;
+}
+.lower:hover {
+	background: #555;
+	transition: background 0.5s ease;
+}
+#page_container {
+	background: #555555;
+	width: calc(100vw - 50px);
+	min-height: calc(100vh - 500px);
+	color: white;
+	padding: 25px;
+	text-align: center;
+}
+.contact_page {
+	text-align: center;
+}
+.exp_page {
+	font-size: 1.25em;
+	text-align: center;
+}
+.work_page {
+	text-align: center;
+}
+#footer {
+	height: 75px;
+	background: linear-gradient(#555,#222);
+	text-align: center;
+	color: white;
+	line-height: 75px;
+	width: 100%;
+	position: relative;
+}
+h1.header {
+	display: none;
+	margin-top: 2em;
+}
+p.content {
+	display: none;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+ul.content {
+	display: none;
+	font-weight: bold;
+}
+ul.content > li {
+	margin: 10px 0;
+}
+ul.content ul {
+	font-weight: normal;
+	font-style: italic;
+}
+ul.content:last-child {
+	font-weight: normal;
+}
+ul.experience, ul.experience * {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.content li.timestamp {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 0.8em;
+	margin-bottom: 0;
+}
+ul.content li.job {
+	margin-top: 0;
+}
+.card {
+	display: inline-block;
+	width: 300px;
+	height: 350px;
+	background: white;
+	border-radius: 16px;
+	box-shadow: 4px 4px 4px #000;
+	margin: 50px 50px;
+	cursor: pointer;
+	transition: background 0.1s ease;
+}
+.card>.contact_logo {
+	height: 150px;
+	display: block;
+	margin: 35px auto;
+}
+.card>.title {
+	color: black;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.card>.data {
+	color: black;
+	text-decoration: none;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.25em;
+}
+.text_1em {
+	font-size: 1em;
+}
+.material_btn {
+	background: white;
+	border: none;
+	color: black;
+	padding: 5px 11px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12pt;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #111;
+}
+m {
+	background: #444;
+	font-family: monospace;
+	font-size: 1.25em;
 }

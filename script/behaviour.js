@@ -15,8 +15,14 @@ $(function() {
 	});
 
 	$(window).scroll(function() {
+		var image_margin;
+		if ($("#header").height() == 225) {
+			image_margin = 0;
+		} else {
+			image_margin = $image.height()+50;
+		}
 		var scroll = $(window).scrollTop();
-		var menu_height = $image.height() + 50 + $("#header").height();
+		var menu_height = image_margin + $("#header").height();
 		if (scroll >= menu_height) {
 			$menu_container.removeClass("mc_not_scrolled").addClass("mc_scrolled");
 			$image.removeClass("hi_not_scrolled").addClass("hi_scrolled");
