@@ -28,6 +28,7 @@ body,header {
 }
 #page_subtitle {
 	visibility: visible;
+	margin-bottom: 32px;
 }
 h1,h2,h3,h4,h5,p,span {
 	color: white;
@@ -116,8 +117,16 @@ h1,h2,h3,h4,h5,p,span {
 	min-height: calc(100vh - 500px);
 	color: white;
 	padding: 25px;
+	text-align: center;
 }
 .contact_page {
+	text-align: center;
+}
+.exp_page {
+	font-size: 1.25em;
+	text-align: center;
+}
+.work_page {
 	text-align: center;
 }
 #footer {
@@ -127,6 +136,7 @@ h1,h2,h3,h4,h5,p,span {
 	color: white;
 	line-height: 75px;
 	width: 100%;
+	position: relative;
 }
 h1.header {
 	display: none;
@@ -135,7 +145,36 @@ h1.header {
 p.content {
 	display: none;
 	font-size: 1.25em;
-	text-align: justify;
+	text-align: center;
+}
+
+ul.content {
+	display: none;
+	font-weight: bold;
+}
+ul.content > li {
+	margin: 10px 0;
+}
+ul.content ul {
+	font-weight: normal;
+	font-style: italic;
+}
+ul.content:last-child {
+	font-weight: normal;
+}
+ul.experience, ul.experience * {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.content li.timestamp {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 0.8em;
+	margin-bottom: 0;
+}
+ul.content li.job {
+	margin-top: 0;
 }
 .card {
 	display: inline-block;
@@ -165,5 +204,27 @@ p.content {
 	text-decoration: none;
 	display: block;
 	margin: 0 auto;
+	font-size: 1.25em;
+}
+.text_1em {
+	font-size: 1em;
+}
+.material_btn {
+	background: white;
+    	border: none;
+    	color: black;
+    	padding: 5px 11px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 12pt;
+    	margin: 4px 2px;
+    	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #111;
+}
+m {
+	background: #444;
+	font-family: monospace;
 	font-size: 1.25em;
 }

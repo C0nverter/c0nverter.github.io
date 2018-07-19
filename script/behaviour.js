@@ -3,10 +3,12 @@ $(function() {
 	var $menu_container = $("#menu_container");
 	var $page_container = $("#page_container");
 	var paragraphs = $('p.content');
+	var lists = $('ul.content');
 	var headers = $('h1.header');
 
-	paragraphs.fadeIn(1000);
 	headers.fadeIn(1000);
+	paragraphs.fadeIn(1000);
+	lists.fadeIn(1000);
 
 	$(document).delegate('div.card', 'click', function() {
 		window.location = $(this).find("a.data").attr('href');
