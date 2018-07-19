@@ -1,6 +1,32 @@
 @media only screen and (max-width: 1024px) {
+	body {
+		background: #222;
+	}
+	#header {
+		height: auto;
+	}
 	#header_image {
-		width: 20vw;
-		left: 50vw;
+		width: 100px;
+	}
+	.hi_not_scrolled {
+		position: static;
+		margin: 50px auto 0 auto;
+		display: block;
+	}
+	.hi_scrolled {
+		position: static;
+	}
+	#menu_container {
+		height: 100px;
+	}
+	#contain_top {
+		height: 50px;
+	}
+	#contain_btm {
+		height: 50px;
+	}
+	.menu_item {
+		height: 50px;
+		line-height: 50px;
 	}
 }

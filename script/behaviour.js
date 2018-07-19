@@ -16,7 +16,8 @@ $(function() {
 
 	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
-		if (scroll >= 225) {
+		var menu_height = $image.height() + 50 + $("#header").height();
+		if (scroll >= menu_height) {
 			$menu_container.removeClass("mc_not_scrolled").addClass("mc_scrolled");
 			$image.removeClass("hi_not_scrolled").addClass("hi_scrolled");
 			$page_container.css("margin-top","150px");
